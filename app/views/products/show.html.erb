@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %> </p>
+<h2>Nome: <%= @product.name %> </h2>
+<ul>
+<li>Fabricante: <%= @product.producer %> </li>
+</ul>
+<ul>
+<li>Subcategoria: <%= @product.sub_category.name %> </li>
+</ul>
+<%= link_to 'Editar Produto', edit_product_path(@product) %>
+<%= link_to 'Home', root_path %>
