@@ -161,7 +161,7 @@ ul li {
 	text-transform: uppercase;
 }
 .navigation a:hover, .navigation a.active {
-	color: #80FD74;
+	color: rgb(20, 173, 0);
 }
 .nav-toggle {
 	display: none;
@@ -321,29 +321,31 @@ ul li {
 	font-size: 65px;
 	font-weight: 700;
 	text-transform: uppercase;
+	text-shadow: 2px 2px 10px black;
 }
 .banner-text p {
-	color: rgba(255, 255, 255, 0.60);
+	color: rgb(14, 14, 14);
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	margin-top: 30px;
 	margin-bottom: 80px;
+	text-shadow: 1px 1px 3px white;
 }
 /* ==========================================================================
 	$intro
 ========================================================================== */
 .intro {
 	background-color: #00aeda;
-}
-.intro h3 {
-	color: #fff;
-	margin-top: 0;
-}
-.intro p {
-	font-family: "Merriweather", Arial, sans-serif;
-	color: rgba(255, 255, 255, 0.75);
-	font-weight: 400;
+	h3 {
+		color: #fff;
+		margin-top: 0;
+	}
+	p {
+		font-family: "Merriweather", Arial, sans-serif;
+		color: rgba(255, 255, 255, 0.75);
+		font-weight: 400;
+	}
 }
 /* ------------------------------------------------------------------------------
 	 Serives
@@ -446,8 +448,21 @@ ul li {
 /* ------------------------------------------------------------------------------
 	 Teams
 -------------------------------------------------------------------------------*/
+.teams {
+	background-color: #3bc492;
+}
+.titled {
+	h5 {
+		font-size: 30px;
+		text-align: center;
+		padding-bottom: 40px;
+		color: white;
+	}
+}
 .person {
 	max-width: 270px;
+	display: table;
+	margin: 0 auto;
 	text-align: center;
 }
 .person img {
@@ -457,16 +472,19 @@ ul li {
 	margin: auto;
 }
 .person-content {
-	margin-top: 20px;
+	margin-top: 10px;
+	p {
+		color: #4d4d4d;
+	}
 }
 .person h4 {
 	font-weight: 400;
 }
 .person h5 {
-	color: #00aeda;
+	color: #d3ffce;
 	font-size: 13px;
 	font-weight: 400;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 }
 .social-icons, .footer .footer-share {
 	margin-top: 30px;

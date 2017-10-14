@@ -1,15 +1,13 @@
 <!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="index.html">MERCASA</a>
+    <div class="header-content clearfix"> <%= link_to "MERCASA", root_path, class: "logo"%>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
-          <li><a href="#intro">Seçao 1</a></li>
-          <li><a href="#services">Seçao 2</a></li>
-          <li><a href="#works">Seçao 3</a></li>
-          <li><a href="#teams">Seçao 4</a></li>
-          <li><a href="#testimonials">Seçao 5</a></li>
-          <li><a href="#contact">Seçao 6</a></li>
+          <li><a href="#intro">Atendem meu bairro?</a></li>
+          <li><a href="#services">Sobre</a></li>
+          <li><a href="#teams">Quem somos</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
@@ -19,7 +17,8 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="banner-text text-center">
         <h1>O supermercado a um click de distância</h1>
-        <p>blablablalblabalablabalbalalblabalbalblaa baaallbalba  abla ba al blblbb a lalbal albal lbal alblalablblbllbla lal bla la bla ablaba lablblal alba l lba alba laba lbal la bla al la labala laba l lb</p>
+        <p>Seu tempo é precioso demais para desperdiçá-lo nos corredores e nas filas dos supermercados.<br>Ajudar seu filho no dever de casa? Estudar para aquela prova importante?
+        <br>Aprender uma nova língua? Ver um filme com a família ou com os amigos?<br><br>O que você faria se ganhasse mais tempo pra você?</p>
         <a href="#" class="btn btn-large">Cadastre-se</a> </div>
       <!-- banner text --> 
     </div>
@@ -30,8 +29,11 @@
 <section id="intro" class="section intro">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Frase de efeito</h3>
-      <p>mais explicações sobre o negócio, mais explicações sobre o negócio, mais explicações sobre o negócio, mais explicações sobre o negócio, mais explicações sobre o negócio, mais explicações sobre o negócio, </p>
+      <h3>Digite seu CEP</h3>
+      <p>Nosso grande objetivo é poder levar o Mercasa a todos os paulistanos, por isso, estamos em constante expansão. Digite seu CEP e descubra se já chegamos até você - esperamos que sim ;)</p>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="CEP">
+      </div>
     </div>
   </div>
 </section>
@@ -40,257 +42,111 @@
 <section id="services" class="services service-section">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-strategy"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-heart" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 1</h5>
-          <p>justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, </p>
+          <h5>Seu tempo de vida é precioso!</h5>
+          <p>Queremos que você tenha mais tempo pra dedicar às coisas realmente importantes da vida. Esqueça os corredores e as filas dos supermercados, nós levamos o mercado até você!</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-briefcase"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-shopping-cart" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 2</h5>
-          <p>justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, </p>
+          <h5>Compre de qualquer lugar</h5>
+          <p>Pelo computador ou celular, através de nosso site; Mercasa é o mercado que cabe no seu bolso e está sempre disponível para atendê-lo.</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-tools"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-hourglass" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 3</h5>
-          <p>justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, justificativa e mais justificativa e um pouco mais de justificativa, </p>
+          <h5>Receba rápido ou quando quiser</h5>
+          <p>Tá com pressa? Entregamos seu pedido em até 3 horas, nada de te deixar esperando até o dia seguinte! Quer agendar sua entrega? Receber regularmente? Aqui você pode tudo isso e muito mais!</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-genius"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-tasks" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 4</h5>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
+          <h5>Saiba seu histórico de compras</h5>
+          <p>Faça uma nova compra baseando-se em compras anteriores, removendo ou adicionando poucos itens, em vez de criar uma lista do zero.<br>Maior controle e comodidade pra você.</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-briefcase" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 5</h5>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
+          <h5>Monte combos de produtos</h5>
+          <p>Todos os ingredientes de uma receita, ou todos os produtos para aquele churrasco tradicional de domingo. Monte seus próprios combos e compre tudo com 1 click.</p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-trophy"></span>
+      <div class="col-md-4 col-sm-6 services text-center"> <span class="glyphicon glyphicon-star" style="font-size: 2em; color: #00aeda;"></span>
         <div class="services-content">
-          <h5>Benefício 6</h5>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
+          <h5>Fazemos tudo do seu jeito</h5>
+          <p>Pagar direto pelo site ou no momento da entrega? Não estará em casa e gostaria que deixássemos no vizinho ou na portaria? Sem problemas! Diga-nos o que precisa e faremos de tudo para atendê-lo.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- services section --> 
-<!-- work section -->
-<section id="works" class="works section no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-1.jpg" class="work-box"> <img src="/images/work-1.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-2.jpg" class="work-box"> <img src="/images/work-2.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-3.jpg" class="work-box"> <img src="/images/work-3.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-4.jpg" class="work-box"> <img src="/images/work-4.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-5.jpg" class="work-box"> <img src="/images/work-5.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-6.jpg" class="work-box"> <img src="/images/work-6.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-7.jpg" class="work-box"> <img src="/images/work-7.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="/images/work-8.jpg" class="work-box"> <img src="/images/work-8.jpg" alt="">
-        <div class="overlay">
-          <div class="overlay-caption">
-            <h5>Project Name</h5>
-            <p>Website Design</p>
-          </div>
-        </div>
-        <!-- overlay --> 
-        </a> </div>
-    </div>
-  </div>
-</section>
-<!-- work section --> 
 <!-- our team section -->
 <section id="teams" class="section teams">
   <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="person"><img src="<%= asset_path('team-1.jpg') %>" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Fulano</h4>
-            <h5 class="role">The Mastermind</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+    <div class="row titled">
+      <h5>Nosso Time</h5>
+      <div class="center-aligner">
+        <div class="col-md-4 col-sm-6">
+          <div class="person"><img src="<%= asset_path('lucas.JPG') %>" alt="" class="img-responsive">
+            <div class="person-content">
+              <h4>Lucas Correa</h4>
+              <h5 class="role" style="padding-bottom: 15px;">Desenvolvedor</h5>
+              <p>Formado em Sistemas de Informação, pela USP, adora Ciência de Dados e Inteligência Artificial. Patente AK no CS:GO, faz parkour desde os 11 anos mas não sabe nadar.</p>
+            </div>
+            <ul class="social-icons clearfix">
+              <li><a href="https://www.facebook.com/lucascorreaaa" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://twitter.com/lucascorreaaa" target="_blank"><span class="fa fa-twitter"></span></a></li>
+              <li><a href="https://www.linkedin.com/in/lucascorreasilva/" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+            </ul>
           </div>
-          <ul class="social-icons clearfix">
-            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
-          </ul>
         </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="person"> <img src="<%= asset_path('team-2.jpg') %>" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Ciclano</h4>
-            <h5 class="role">Creative head</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="person"> <img src="<%= asset_path('bruno.JPG') %>" alt="" class="img-responsive">
+            <div class="person-content">
+              <h4>Bruno Procopio</h4>
+              <h5 class="role" style="padding-bottom: 15px;">Desenvolvedor</h5>
+              <p>Formado em Sistemas de Informação, pela USP, exímio jogador de Magic e programador C#. Gosta de se embebedar e baixar filmes clássicos via torrent.</p>
+            </div>
+            <ul class="social-icons clearfix">
+              <li><a href="https://www.facebook.com/bruno.procopio.31" class="" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <!-- <li><a href="#" class="" target="_blank"><span class="fa fa-twitter"></span></a></li> -->
+              <li><a href="https://www.linkedin.com/in/bruno-procopio-313b1499/" class="" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+            </ul>
           </div>
-          <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
-          </ul>
         </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="person"> <img src="<%= asset_path('team-3.jpg') %>" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Beltrano</h4>
-            <h5 class="role">Technical lead</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="person"> <img src="<%= asset_path('gui.JPG') %>" alt="" class="img-responsive">
+            <div class="person-content">
+              <h4>Gui Oliveira</h4>
+              <h5 class="role" style="padding-bottom: 15px;">Desenvolvedor</h5>
+              <p>Formado em Sistemas de Informação, pela USP, goleiro de futebol, apesar da baixa estatura. Adora jogar Fifa, incomodar os vizinhos com sua bateria e dormir no metrô.</p>
+            </div>
+            <ul class="social-icons clearfix">
+              <li><a href="https://www.facebook.com/gui.oliveira.121772" class="" target="_blank"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="https://twitter.com/Gui_01iveira" class="" target="_blank"><span class="fa fa-twitter"></span></a></li>
+              <!-- <li><a href="#" class="" target="_blank"><span class="fa fa-linkedin"></span></a></li> -->
+            </ul>
           </div>
-          <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="person"> <img src="<%= asset_path('team-4.jpg') %>" alt="" class="img-responsive">
-          <div class="person-content">
-            <h4>Mariano</h4>
-            <h5 class="role">Marketing head</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          </div>
-          <ul class="social-icons clearfix">
-            <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
-            <li><a href="#" class=""><span class="fa fa-dribbble"></span></a></li>
-          </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
 <!-- our team section --> 
-<!-- Testimonials section -->
-<section id="testimonials" class="section testimonials no-padding">
-  <div class="container-fluid">
-    <div class="row no-gutter">
-      <div class="flexslider">
-        <ul class="slides">
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <h1>"Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Phasellus non dolor nibh. Nullam elementum Aenean eu leo quam..." </h1>
-                <p>Rene Brown, Open Window production</p>
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <h1>"Cras dictum tellus dui, vitae sollicitudin ipsum. Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat shasellus non dolor nibh. Nullam elementum tellus pretium feugiat." </h1>
-                <p>Brain Rice, Lexix Private Limited.</p>
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <h1>"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur...." </h1>
-                <p>Andi Simond, Global Corporate Inc</p>
-              </blockquote>
-            </div>
-          </li>
-          <li>
-            <div class="col-md-12">
-              <blockquote>
-                <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elitPhasellus non dolor nibh. Nullam elementum tellus pretium feugiat. Cras dictum tellus dui sollcitudin." </h1>
-                <p>Kristy Gabbor, Martix Media</p>
-              </blockquote>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Testimonials section --> 
-
 <!-- contact section -->
 <section id="contact" class="section">
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 conForm">
-        <h5>entre em contato</h5>
-        <p>Nós ficaremos feliz em saber o que você tem a dizer... etc...</p>
-        <div id="message"></div>
+        <h5>entre em contato</h5><br><br>
         <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Nome Completo" >
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email" >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Assunto"></textarea>
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Digite seu nome" >
+          <input name="email" id="email" type="email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Seu email" >
+          <input name="subject" id="subject" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Qual o assunto?" >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Vamos lá, abra seu coração pra gente :)"></textarea>
           <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
-          <div id="simple-msg"></div>
         </form>
       </div>
     </div>
@@ -308,27 +164,18 @@
           <p>Rua dos Bobos, 0<br>
             São Paulo / SP<br>
             sac@mercasa.com</p>
-          <p>Copyright © 2015 Lexis Inc. Todos os direitos reservados. Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
+          <p>Copyright © 2017 Lexis Inc. Todos os direitos reservados. Made with <i class="fa fa-heart pulse"></i> by <a href="http://www.designstub.com/">Designstub</a></p>
         </div>
         <div class="footer-col col-md-3">
           <h5>Serviços</h5>
           <p>
           <ul>
             <li><a href="#">Entrega</a></li>
-            <li><a href="#">Lista de Compras</a></li>
+            <li><a href="#">Histórico de Compras</a></li>
             <li><a href="#">Combos</a></li>
             <li><a href="#">Agendamento</a></li>
           </ul>
           </p>
-        </div>
-        <div class="footer-col col-md-3">
-          <h5>Share with Love</h5>
-          <ul class="footer-share">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          </ul>
         </div>
       </div>
     </div>
