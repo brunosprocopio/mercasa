@@ -4,10 +4,10 @@
     <div class="header-content clearfix"> <%= link_to "MERCASA", root_path, class: "logo"%>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
-          <li><a href="#intro">Atendem meu bairro?</a></li>
+          <li><a href="#estamos-chegando">ESTAMOS CHEGANDO!</a></li>
           <li><a href="#services">Sobre</a></li>
           <li><a href="#teams">Quem somos</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="#contact">Cadastre-se</a></li>
         </ul>
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
@@ -26,14 +26,18 @@
 </section>
 <!-- header section --> 
 <!-- intro section -->
-<section id="intro" class="section intro">
+<section id="estamos-chegando" class="section intro">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Digite seu CEP</h3>
-      <p>Nosso grande objetivo é poder levar o Mercasa a todos os paulistanos, por isso, estamos em constante expansão. Digite seu CEP e descubra se já chegamos até você - esperamos que sim ;)</p>
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="CEP">
-      </div>
+      <h3>ESTAMOS CHEGANDO</h3>
+      <p>Este é o tempo que você vai precisar esperar para nunca mais perder tempo fazendo compras em supermercado.</p>
+      <div id="countdown"></div>      
+      <script type="text/javascript">
+        $('#countdown').countdown('2018/02/01', function(event) {
+          $(this).html(event.strftime('%D dias %Hh %Mm e %Ss '));
+        });
+      </script>
+      <p><br>Nosso mercado online abrirá suas portas no dia <u>01 de Fevereiro de 2018</u>. Esperamos por você! </p>
     </div>
   </div>
 </section>
@@ -140,13 +144,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2 conForm">
-        <h5>entre em contato</h5><br><br>
+        <h5>Cadastre-se</h5>
+        <p>Envie-nos seu <b>nome</b>, <b>email</b> e <b>CEP</b> abaixo para ser notificado e não perder nossa inauguração.<br> Conte-nos o que faria se tivesse mais tempo livre.</p>
         <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Digite seu nome" >
-          <input name="email" id="email" type="email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Seu email" >
-          <input name="subject" id="subject" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Qual o assunto?" >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Vamos lá, abra seu coração pra gente :)"></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
+          <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Nome Completo*" >
+          <input name="email" id="email" type="email" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Email*" >
+          <input name="subject" id="subject" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="CEP*" >
+          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="O que faria se tivesse mais tempo livre?"></textarea>
+          <input type="button" id="submit" name="send" class="submitBnt" value="Enviar" data-toggle="modal" data-target="#myModal" data-show="false">
         </form>
       </div>
     </div>
@@ -181,5 +186,21 @@
     </div>
   </div>
   <!-- footer top --> 
-  
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cadastrado com sucesso!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <!-- <span aria-hidden="true">&times;</span> -->
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Entraremos em contato para garantir que não perca nossa inauguração.</p>
+      </div>
+    </div>
+  </div>
+</div>
